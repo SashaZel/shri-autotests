@@ -8,7 +8,7 @@ describe('Simple Test Case', () => {
 
         const { container } = render(app);
 
-        console.log(container.outerHTML);
+        //console.log(container.outerHTML);
 
         expect(container.textContent).toBe('example');
     });

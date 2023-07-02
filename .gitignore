@@ -5,3 +5,6 @@ Dockerfile
 .dockerignore
 .DS_Store
 html-report
+playwright-report
+e2e/example.spec.ts-snapshots
+test-results

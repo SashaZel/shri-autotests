@@ -36,21 +36,21 @@ export const Application: FC = () => {
         <Helmet titleTemplate="%s — Example store" />
         <nav className="navbar navbar-expand-sm navbar-light bg-light">
             <div className="container">
-                <Link className={bem('Brand', ['navbar-brand'])} to="/">Example store</Link>
+                <Link data-testid="link-home" className={bem('Brand', ['navbar-brand'])} to="/">Example store</Link>
                 <button className={bem('Toggler', ['navbar-toggler'])} aria-label="Toggle navigation" onClick={toggle}>
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className={bem('Menu', [navbarClass])}>
                     <div className="navbar-nav">
-                        <NavLink className="nav-link" activeClassName="active" to="/catalog" onClick={hide}>Catalog</NavLink>
-                        <NavLink className="nav-link" activeClassName="active" to="/delivery" onClick={hide}>Delivery</NavLink>
-                        <NavLink className="nav-link" activeClassName="active" to="/contacts" onClick={hide}>Contacts</NavLink>
-                        <NavLink className="nav-link" activeClassName="active" to="/cart" onClick={hide}>{cartLabel}</NavLink>
+                        <NavLink data-testid="link-catalog" className="nav-link" activeClassName="active" to="/catalog" onClick={hide}>Catalog</NavLink>
+                        <NavLink data-testid="link-delivery" className="nav-link" activeClassName="active" to="/delivery" onClick={hide}>Delivery</NavLink>
+                        <NavLink data-testid="link-contacts" className="nav-link" activeClassName="active" to="/contacts" onClick={hide}>Contacts</NavLink>
+                        <NavLink data-testid="link-cart" className="nav-link" activeClassName="active" to="/cart" onClick={hide}>{cartLabel}</NavLink>
                     </div>
                 </div>
             </div>
         </nav>
-        <div className="container pt-4">
+        <div data-testid="page-content" className="container pt-4">
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/catalog" exact component={Catalog} />
